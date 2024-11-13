@@ -19,6 +19,10 @@ haskell/results.txt: haskell/Dockerfile haskell/Main.hs
 	docker build -t gc-haskell haskell
 	docker run gc-haskell > $@
 
+haskell-nonmoving/results.txt: haskell-nonmoving/Dockerfile haskell-nonmoving/Main.hs
+	docker build -t gc-haskell-nonmoving haskell-nonmoving
+	docker run gc-haskell-nonmoving > $@
+
 java/results.txt: java/Dockerfile java/Main.java
 	docker build -t gc-java java
 	docker run gc-java > $@
